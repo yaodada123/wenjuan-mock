@@ -13,12 +13,13 @@
   "license": "ISC",
   "dependencies": {
     "@koa/cors": "^5.0.0",
+    "@vercel/node": "^5.1.15",
     "dotenv": "^16.4.7",
     "koa": "^2.14.1",
     "koa-router": "^12.0.0",
     "mockjs": "^1.1.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.20"
+    "nodemon": "^2.0.22"
   }
 }
