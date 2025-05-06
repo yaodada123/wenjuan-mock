@@ -29,3 +29,10 @@ jobs:
       # 运行项目（这里使用 dev 脚本）
       - name: Run project
         run: npm run start
+
+      # 部署到 Vercel
+      - name: Deploy to Vercel
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+        run: vercel --prod --token $VERCEL_TOKEN
+# ... existing code ...
