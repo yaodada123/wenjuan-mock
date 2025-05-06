@@ -22,13 +22,17 @@ jobs:
         with:
           node-version: 20
 
+      # 安装 Vercel CLI
+      - name: Install Vercel CLI
+        run: npm install -g vercel
+        
       # 安装依赖
       - name: Install dependencies
         run: npm install
 
-      # 运行项目（这里使用 dev 脚本）
-      - name: Run project
-        run: npm run start
+      # # 运行项目（这里使用 dev 脚本）
+      # - name: Run project
+      #   run: npm run start
 
       # 部署到 Vercel
       - name: Deploy to Vercel
