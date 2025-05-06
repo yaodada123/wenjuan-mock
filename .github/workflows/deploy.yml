@@ -1,0 +1,31 @@
+name: Deploy Wenjuan Mock
+
+# 触发条件：当代码推送到 main 分支时
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    # 运行环境使用最新的 Ubuntu
+    runs-on: ubuntu-latest
+
+    steps:
+      # 检出代码
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # 设置 Node.js 环境
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      # 安装依赖
+      - name: Install dependencies
+        run: npm install
+
+      # 运行项目（这里使用 dev 脚本）
+      - name: Run project
+        run: npm run dev
