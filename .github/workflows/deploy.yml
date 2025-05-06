@@ -28,4 +28,4 @@ jobs:
 
       # 运行项目（这里使用 dev 脚本）
       - name: Run project
-        run: npm run dev
+        run: npm run start
